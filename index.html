@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Notification Web App</title>
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="app-title">Auto Notification Web App</h1>
+            <p class="app-description">Register for the event and receive instant email notifications upon submission.</p>
+        </header>
+
+        <div class="form-container">
+            <form id="registrationForm" action="submit-form" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <small class="error-message hidden">Name is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <small class="error-message hidden">Valid email is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="event">Event Name</label>
+                    <input type="text" id="event" name="event" placeholder="Enter the event name" required>
+                    <small class="error-message hidden">Event name is required.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="You can leave a message or special request"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <p>Your registration is successful! A confirmation email has been sent.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Auto Notification Web App. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
